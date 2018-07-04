@@ -25,5 +25,7 @@ testdemo:
 testprod:
 	apex -r ap-southeast-1 --env prod invoke post < event.json
 
+testlocal:
+	curl -i -H "Content-Type: application/json" -H "Authorization: Bearer blablabla" -X POST -d @event.json http://localhost:3000/api/ses
 
 .PHONY: dev demo prod testdev testdemo testprod
