@@ -32,9 +32,8 @@ func post2Case(cfg aws.Config, evt json.RawMessage) (err error) {
 	}
 	casehost := fmt.Sprintf("https://%s", e.Udomain("case"))
 	APIAccessToken := e.GetSecret("API_ACCESS_TOKEN")
-	log.Infof("Posting to: %s, payload %s, with key %s", casehost, evt, APIAccessToken)
-
-	url := casehost + "/api/bouncing" + APIAccessToken
+	url := casehost + "/api/bouncing"
+	log.Infof("Posting to: %s, payload %s, with header key %s", url, evt, APIAccessToken)
 	req, err := http.NewRequest("POST", url, strings.NewReader(string(evt)))
 	if err != nil {
 		log.WithError(err).Error("constructing POST")
