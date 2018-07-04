@@ -1,0 +1,9 @@
+{
+  "name": "ses2case",
+  "description": "Posts AWS SES notifications to the frontend",
+  "profile": "uneet-dev",
+  "memory": 128,
+  "timeout": 5,
+  "role": "arn:aws:iam::812644853088:role/ses2case_lambda_function",
+  "environment": {}
+}

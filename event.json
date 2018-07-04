@@ -1,0 +1,30 @@
+{
+  "notificationType": "Bounce",
+  "bounce": {
+    "bounceType": "Permanent",
+    "bounceSubType": "General",
+    "bouncedRecipients": [
+      {
+        "emailAddress": "totallyinvalid@example.com",
+        "action": "failed",
+        "status": "5.3.0",
+        "diagnosticCode": "smtp; 550 #5.1.0 Address rejected."
+      }
+    ],
+    "timestamp": "2018-07-03T09:56:35.609Z",
+    "feedbackId": "010101645f928659-ba1eecaa-72ed-4fe5-9870-f851e68a0299-000000",
+    "remoteMtaIp": "149.216.91.222",
+    "reportingMTA": "dsn; a27-42.smtp-out.us-west-2.amazonses.com"
+  },
+  "mail": {
+    "timestamp": "2018-07-03T09:56:32.000Z",
+    "source": "case@unee-t.com",
+    "sourceArn": "arn:aws:ses:us-west-2:192458993663:identity/case@unee-t.com",
+    "sourceIp": "13.229.56.110",
+    "sendingAccountId": "192458993663",
+    "messageId": "010101645f927bb9-8b2abf97-1ceb-4b02-899f-06ab8c27dae8-000000",
+    "destination": [
+      "totallyinvalid@example.com"
+    ]
+  }
+}
