@@ -5,7 +5,7 @@
     "bounceSubType": "General",
     "bouncedRecipients": [
       {
-        "emailAddress": "totallyinvalid@example.com",
+        "emailAddress": "invalid@example.com",
         "action": "failed",
         "status": "5.3.0",
         "diagnosticCode": "smtp; 550 #5.1.0 Address rejected."
@@ -24,7 +24,7 @@
     "sendingAccountId": "192458993663",
     "messageId": "010101645f927bb9-8b2abf97-1ceb-4b02-899f-06ab8c27dae8-000000",
     "destination": [
-      "totallyinvalid@example.com"
+      "invalid@example.com"
     ]
   }
 }
