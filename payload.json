@@ -1,0 +1,22 @@
+{
+    "Records": [
+        {
+            "EventSource": "aws:sns",
+            "EventVersion": "1.0",
+            "EventSubscriptionArn": "arn:aws:sns:us-west-2:192458993663:case-emails:9b54812a-b22b-411f-b28e-dc1bff4c180f",
+            "Sns": {
+                "Type": "Notification",
+                "MessageId": "1d1183cb-8736-5993-8ae8-d7d50e77c380",
+                "TopicArn": "arn:aws:sns:us-west-2:192458993663:case-emails",
+                "Subject": null,
+                "Message": "{\"notificationType\":\"Bounce\",\"bounce\":{\"bounceType\":\"Transient\",\"bounceSubType\":\"MailboxFull\",\"bouncedRecipients\":[{\"emailAddress\":\"support.nobody@lmbhousing.com\",\"action\":\"failed\",\"status\":\"5.0.0\"}],\"timestamp\":\"2018-09-21T05:52:01.000Z\",\"feedbackId\":\"01010165faaf5e22-ba85274a-19b8-477b-bab2-8142d92886ac-000000\",\"reportingMTA\":\"dns; gnonpom2.lmbhousing.com\"},\"mail\":{\"timestamp\":\"2018-09-19T01:30:39.000Z\",\"source\":\"case@unee-t.com\",\"sourceArn\":\"arn:aws:ses:us-west-2:192458993663:identity/case@unee-t.com\",\"sourceIp\":\"13.229.104.114\",\"sendingAccountId\":\"192458993663\",\"messageId\":\"01010165ef73631b-62a90f7a-ca24-4164-8060-a9dcc1bb62e9-000000\",\"destination\":[\"support.nobody@lmbhousing.com\"]}}",
+                "Timestamp": "2018-09-21T05:52:01.703Z",
+                "SignatureVersion": "1",
+                "Signature": "XZjCmw3TlGLbQvhoF0LUccMhQ482wMqvuW9Bw0kSazlmELWKyD8WiErlZs4uitI98qh5j6tMFcXHCvYUhX40S3Bn9A4t4C7VXgywLyYYfUPFhWd6p+84ksf79QOXuOuo6YEzUX6U6SbbPVD+qyDB9mm5Le2XyXuEPEWuyWHqvRGd565Q/PCJI2IUQZCD/u6E9GfEl+Ms1qmrvkTWMn/yBtCw3kJ8KQpqVn8RW8tA4z7fHGU+6fV1Y/F24zoYAl+0/L2LXoAinXjFMd5Ttaua4agW1cqoCBOpHyI34dohnosd0MTYzppK8e1RkJJZpfbwXTDW70BwZLsFkzQOuM0VtQ==",
+                "SigningCertUrl": "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-ac565b8b1a6c5d002d285f9598aa1d9b.pem",
+                "UnsubscribeUrl": "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:192458993663:case-emails:9b54812a-b22b-411f-b28e-dc1bff4c180f",
+                "MessageAttributes": {}
+            }
+        }
+    ]
+}

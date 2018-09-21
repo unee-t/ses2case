@@ -18,6 +18,10 @@ prod:
 logsdev:
 	apex -r $(REGION) --env dev logs
 
+
+logsprod:
+	apex -r $(REGION) --env prod logs
+
 testdev:
 	apex -r $(REGION) --env dev invoke post < event.json
 
@@ -28,6 +32,6 @@ testprod:
 	apex -r $(REGION) --env prod invoke post < event.json
 
 testlocal:
-	curl -i -H "Content-Type: application/json" -H "Authorization: Bearer blablabla" -X POST -d @event.json http://localhost:3000/api/ses
+	curl -i -H "Content-Type: application/json" -H "Authorization: Bearer blablabla" -X POST -d @payload.json http://localhost:3000/api/ses
 
 .PHONY: dev demo prod testdev testdemo testprod
