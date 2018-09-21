@@ -9,18 +9,27 @@ import (
 	"strings"
 
 	"github.com/apex/log"
+	"github.com/aws/aws-lambda-go/events"
 	"github.com/aws/aws-lambda-go/lambda"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/aws/external"
 	"github.com/unee-t/env"
 )
 
-func handler(ctx context.Context, evt json.RawMessage) (string, error) {
+func handler(ctx context.Context, snsEvent events.SNSEvent) (string, error) {
 	cfg, err := external.LoadDefaultAWSConfig()
 	if err != nil {
 		return "", err
 	}
-	err = post2Case(cfg, evt)
+
+	var j json.RawMessage
+
+	err = json.Unmarshal([]byte(snsEvent.Records[0].SNS.Message), &j)
+	if err != nil {
+		return "", err
+	}
+
+	err = post2Case(cfg, j)
 	return "", err
 }
 

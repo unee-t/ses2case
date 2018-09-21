@@ -16,14 +16,13 @@ prod:
 	apex -r $(REGION) --env prod deploy
 
 logsdev:
-	apex -r $(REGION) --env dev logs
-
+	apex -r $(REGION) --env dev logs -f
 
 logsprod:
 	apex -r $(REGION) --env prod logs
 
 testdev:
-	apex -r $(REGION) --env dev invoke post < event.json
+	apex -r $(REGION) --env dev invoke post < payload.json
 
 testdemo:
 	apex -r $(REGION) --env demo invoke post < event.json
